@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh;
+  background-color: lightcyan;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.headerUL {
+  position: absolute;
+  @media (max-width: 958px) {
+    position: static;
+  }
+  right: 5%;
+  top: 15%;
+  list-style-type: none;
+  display: flex;
+  li {
+    display: flex;
+    background-color: lightgreen;
+    box-shadow: 2px 3px 4px lightslategrey;
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+}
