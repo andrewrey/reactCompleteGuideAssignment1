@@ -2,7 +2,8 @@ header {
   display: flex;
   flex-direction: column;
   min-height: 40vh;
-  background-color: lightcyan;
+  background: rgb(34, 193, 195);
+  background: radial-gradient(circle, rgba(34, 193, 195, 1) 11%, rgba(0, 0, 0, 1) 86%);
   justify-content: center;
   align-items: center;
   position: relative;
@@ -13,7 +14,8 @@ header {
 
 .headerUL {
   position: absolute;
-  @media (max-width: 958px) {
+  @media (max-width: 1160px) {
+    margin-top: 25px;
     position: static;
   }
   right: 5%;
@@ -21,11 +23,22 @@ header {
   list-style-type: none;
   display: flex;
   li {
+    transition: all 0.2s ease-in;
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 4px 5px 6px rgb(186, 186, 186);
+    }
+    &:active {
+      transform: translateY(-5px);
+      box-shadow: 3px 4px 5px rgb(186, 186, 186);
+    }
+    text-align: center;
     display: flex;
     background-color: lightgreen;
-    box-shadow: 2px 3px 4px lightslategrey;
+    box-shadow: 2px 3px 4px rgb(186, 186, 186);
     display: block;
-    padding: 10px;
+    width: 100px;
+    padding: 10px 20px;
     border-radius: 15px;
     &:not(:last-of-type) {
       margin-right: 20px;
