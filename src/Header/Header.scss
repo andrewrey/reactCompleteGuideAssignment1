@@ -25,11 +25,11 @@ header {
   li {
     transition: all 0.2s ease-in;
     &:hover {
-      transform: translateY(-8px);
+      transform: translateY(-5px);
       box-shadow: 4px 5px 6px rgb(186, 186, 186);
     }
     &:active {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
       box-shadow: 3px 4px 5px rgb(186, 186, 186);
     }
     text-align: center;
