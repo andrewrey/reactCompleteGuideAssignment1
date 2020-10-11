@@ -28,6 +28,7 @@ class App extends Component {
     let id = this.updateIDNumber();
     this.setState({
       guests: [{ name, id }, ...this.state.guests],
+      pendingGuest: "",
     });
   };
 
@@ -35,7 +36,7 @@ class App extends Component {
     return (
       <div className={"App"}>
         <Header />
-        <MainContent handleName={this.handleNameInput} />
+        <MainContent handleName={this.handleNameInput} handleSubmit={this.handleNameSubmit.bind(this, this.state.pendingGuest)} pendingGuest={this.state.pendingGuest} />
       </div>
     );
   }
