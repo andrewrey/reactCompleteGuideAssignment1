@@ -1,9 +1,9 @@
 import React from "react";
 
-const GuestName = () => {
+const GuestName = ({ name }) => {
   return (
     <div className="guestCard">
-      <h3>Name</h3>
+      <h3>{name}</h3>
     </div>
   );
 };

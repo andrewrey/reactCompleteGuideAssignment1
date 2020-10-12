@@ -1,10 +1,12 @@
 import React from "react";
 import GuestName from "../GuestName";
 
-const Output = () => {
+const Output = ({ guests }) => {
   return (
     <div className="guest-list">
-      <GuestName />
+      {guests.map((guest) => (
+        <GuestName name={guest.name} />
+      ))}
     </div>
   );
 };

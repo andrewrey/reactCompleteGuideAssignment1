@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div className={"App"}>
         <Header />
-        <MainContent handleName={this.handleNameInput} handleSubmit={this.handleNameSubmit.bind(this, this.state.pendingGuest)} pendingGuest={this.state.pendingGuest} />
+        <MainContent handleName={this.handleNameInput} handleSubmit={this.handleNameSubmit.bind(this, this.state.pendingGuest)} pendingGuest={this.state.pendingGuest} guests={this.state.guests} />
       </div>
     );
   }
