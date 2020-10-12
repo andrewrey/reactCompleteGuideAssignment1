@@ -24,6 +24,12 @@ class App extends Component {
     });
   };
 
+  handleRemoveName = (name) => {
+    this.setState({
+      guests: this.state.guests.filter((guest) => guest.name !== name),
+    });
+  };
+
   handleNameSubmit = (name) => {
     if (name === "") {
       alert("Please enter a name!");
@@ -40,7 +46,7 @@ class App extends Component {
     return (
       <div className={"App"}>
         <Header />
-        <MainContent handleName={this.handleNameInput} handleSubmit={this.handleNameSubmit.bind(this, this.state.pendingGuest)} pendingGuest={this.state.pendingGuest} guests={this.state.guests} />
+        <MainContent handleName={this.handleNameInput} handleSubmit={this.handleNameSubmit.bind(this, this.state.pendingGuest)} pendingGuest={this.state.pendingGuest} guests={this.state.guests} removeName={this.handleRemoveName} />
       </div>
     );
   }
