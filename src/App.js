@@ -25,11 +25,15 @@ class App extends Component {
   };
 
   handleNameSubmit = (name) => {
-    let id = this.updateIDNumber();
-    this.setState({
-      guests: [{ name, id }, ...this.state.guests],
-      pendingGuest: "",
-    });
+    if (name === "") {
+      alert("Please enter a name!");
+    } else {
+      let id = this.updateIDNumber();
+      this.setState({
+        guests: [{ name, id }, ...this.state.guests],
+        pendingGuest: "",
+      });
+    }
   };
 
   render() {
