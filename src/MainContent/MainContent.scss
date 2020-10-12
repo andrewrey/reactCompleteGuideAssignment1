@@ -24,5 +24,22 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .guest-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .guestCard {
+    width: 100px;
+    padding: 5px 0;
+    border: 1px solid grey;
+    box-shadow: 2px 3px 3px black;
+    margin-bottom: 25px;
+    background: linear-gradient(to top, yellow, green);
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 }
